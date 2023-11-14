@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="zh-CN" color-mode="light">
 
   <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="keywords" content="" />
+  
   <meta name="author" content="u038dsc" />
   <meta name="description" content="" />
   
@@ -14,7 +14,9 @@
       archive_a: 2023/11 
       
       
+      |
     
+     the blog of dsc
   </title>
 
   
@@ -23,77 +25,87 @@
   
 
   <!-- Raleway-Font -->
-  <link href="https://fonts.googleapis.com/css?family=Montserrat|Roboto:400,400italic,600|Roboto+Mono" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Raleway&display=swap" rel="stylesheet">
 
   <!-- hexo site css -->
-  
-<link rel="stylesheet" href="/css/base.css">
-<link rel="stylesheet" href="/css/common.css">
-<link rel="stylesheet" href="/iconfont/iconfont.css">
-
-
-  
-
+  <link rel="stylesheet" href="/css/main.css" />
+  <link rel="stylesheet" href="//at.alicdn.com/t/font_1886449_67xjft27j1l.css" />
+  <!-- 代码块风格 -->
   
 
   <!-- jquery3.3.1 -->
-  <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+  
+    <script defer type="text/javascript" src="/plugins/jquery.min.js"></script>
+  
 
   <!-- fancybox -->
-  <link href="https://cdn.bootcss.com/fancybox/3.5.2/jquery.fancybox.min.css" rel="stylesheet">
-  <script async src="https://cdn.bootcss.com/fancybox/3.5.2/jquery.fancybox.min.js"></script>
+  
+    <link href="/plugins/jquery.fancybox.min.css" rel="stylesheet">
+    <script defer type="text/javascript" src="/plugins/jquery.fancybox.min.js"></script>
+  
   
 <script src="/js/fancybox.js"></script>
 
 
+  
+
+  
+
+  <script>
+    var html = document.documentElement
+    const colorMode = localStorage.getItem('color-mode')
+    if (colorMode) {
+      document.documentElement.setAttribute('color-mode', colorMode)
+    }
+  </script>
 <meta name="generator" content="Hexo 7.0.0"></head>
 
 
   <body>
     <div id="app">
       <div class="header">
-  <a href="/">LEEDOM</a>
+  <div class="avatar">
+    <a href="/">
+      <!-- 头像取消懒加载，添加no-lazy -->
+      
+        <img no-lazy src="/images/avatar.png" alt="">
+      
+    </a>
+    <div class="nickname"><a href="/">Oranges</a></div>
+  </div>
+  <div class="navbar">
+    <ul>
+      
+        <li class="nav-item" data-path="/">
+          <a href="/">Home</a>
+        </li>
+      
+        <li class="nav-item" data-path="/archives/">
+          <a href="/archives/">Archives</a>
+        </li>
+      
+        <li class="nav-item" data-path="/tags/">
+          <a href="/tags/">Tags</a>
+        </li>
+      
+        <li class="nav-item" data-path="/friends/">
+          <a href="/friends/">Friends</a>
+        </li>
+      
+        <li class="nav-item" data-path="/about/">
+          <a href="/about/">About</a>
+        </li>
+      
+    </ul>
+  </div>
 </div>
 
 
-      <p class="links">
-  
-    <a title="archives" target="" href="/archives/">
-      <i class="iconfont icon-bookmark"></i>
-    </a>
-  
-    <a title="github" target="_blank" href="https://github.com/leedom92/hexo-theme-leedom">
-      <i class="iconfont icon-github"></i>
-    </a>
-  
-    <a title="email" target="" href="">
-      <i class="iconfont icon-envelope"></i>
-    </a>
-  
-    <a title="facebook" target="" href="">
-      <i class="iconfont icon-facebooksquare"></i>
-    </a>
-  
-    <a title="twitter" target="" href="">
-      <i class="iconfont icon-twitter"></i>
-    </a>
-  
-    <a title="wechat" target="" href="">
-      <i class="iconfont icon-wechat"></i>
-    </a>
-  
-    <a title="weibo" target="" href="">
-      <i class="iconfont icon-weibo"></i>
-    </a>
-  
-    <a title="rss" target="_blank" href="/atom.xml">
-      <i class="iconfont icon-rss"></i>
-    </a>
-  
-</p>
+<script src="/js/activeNav.js"></script>
 
 
-      <div class="main">
+
+      <div class="flex-container">
         <!-- 归档页，展示本站所有文章，按照年份降序归类，url形式：https://yoursite/archives/ -->
 
 <!-- last: 按年份把文章分组，当前遍历到的年份 -->
@@ -109,13 +121,20 @@
           </h2>
         </div>
       
+      <div class="post-item" title="欢迎">
+        <div class="time-m-d">11-14</div>
+        <div class="title">
+          <a href="/2023/11/14/%E6%AC%A2%E8%BF%8E/">
+            <span>欢迎</span>
+          </a>
+        </div>
+      </div>
+    
       <div class="post-item" title="一些杂项">
         <div class="time-m-d">11-14</div>
         <div class="title">
           <a href="/2023/11/14/%E4%B8%80%E4%BA%9B%E6%9D%82%E9%A1%B9/">
-            
-              <span>一些杂项</span>
-            
+            <span>一些杂项</span>
           </a>
         </div>
       </div>
@@ -123,25 +142,43 @@
   </div>
 </div>
 
-        <div class="footer">
+        
+<div class="footer">
+  <div class="social">
+    <ul>
+      
+        <li>
+          
+              <a title="github" target="_blank" rel="noopener" href="https://github.com/zchengsite/hexo-theme-oranges">
+                <i class="iconfont icon-github"></i>
+              </a>
+              
+        </li>
+        
+    </ul>
+  </div>
   
+    
     <div class="footer-more">
       
-        <a target="_blank" rel="noopener" href="https://github.com/leedom92/hexo-theme-leedom">Copyright © Leedom 2021</a>
+        <a target="_blank" rel="noopener" href="https://github.com/zchengsite/hexo-theme-oranges">Copyright © 2023 Oranges</a>
         
     </div>
   
+    
     <div class="footer-more">
       
-        <a target="_blank" rel="noopener" href="https://github.com/leedom92/hexo-theme-leedom">Theme by Leedom | Powered by Hexo</a>
+        <a target="_blank" rel="noopener" href="https://github.com/zchengsite/hexo-theme-oranges">Theme by Oranges | Powered by Hexo</a>
         
     </div>
+  
   
 </div>
 
       </div>
 
-      <div class="back-to-top hidden">
+      <div class="tools-bar">
+        <div class="back-to-top tools-bar-item hidden">
   <a href="javascript: void(0)">
     <i class="iconfont icon-chevronup"></i>
   </a>
@@ -152,8 +189,8 @@
 
 
 
-      
-  <div class="search-icon" id="search-icon">
+        
+  <div class="search-icon tools-bar-item" id="search-icon">
     <a href="javascript: void(0)">
       <i class="iconfont icon-search"></i>
     </a>
@@ -161,24 +198,22 @@
 
   <div class="search-overlay hidden">
     <div class="search-content" tabindex="0">
-      <div class="search-box">
-        <div class="search-title">
-          <!-- <span class="search-icon-input">
-            <a href="javascript: void(0)">
-              <i class="iconfont icon-search"></i>
-            </a>
-          </span> -->
-          
-            <input type="text" class="search-input" id="search-input" placeholder="搜索...">
-          
-          <span class="search-close-icon" id="search-close-icon">
-            <a href="javascript: void(0)">
-              <i class="iconfont icon-close"></i>
-            </a>
-          </span>
-        </div>
-        <div class="search-result" id="search-result"></div>
+      <div class="search-title">
+        <span class="search-icon-input">
+          <a href="javascript: void(0)">
+            <i class="iconfont icon-search"></i>
+          </a>
+        </span>
+        
+          <input type="text" class="search-input" id="search-input" placeholder="搜索...">
+        
+        <span class="search-close-icon" id="search-close-icon">
+          <a href="javascript: void(0)">
+            <i class="iconfont icon-close"></i>
+          </a>
+        </span>
       </div>
+      <div class="search-result" id="search-result"></div>
     </div>
   </div>
 
@@ -186,10 +221,10 @@
     var inputArea = document.querySelector("#search-input")
     var searchOverlayArea = document.querySelector(".search-overlay")
 
-    // inputArea.onclick = function() {
-    //   getSearchFile()
-    //   this.onclick = null
-    // }
+    inputArea.onclick = function() {
+      getSearchFile()
+      this.onclick = null
+    }
 
     inputArea.onkeydown = function() {
       if(event.keyCode == 13)
@@ -201,8 +236,7 @@
       if (isHidden) {
         searchOverlayArea.classList.remove('hidden')
         document.body.classList.add('hidden')
-        inputArea.focus()
-        getSearchFile()
+        // inputArea.focus()
       } else {
         searchOverlayArea.classList.add('hidden')
         document.body.classList.remove('hidden')
@@ -223,8 +257,7 @@
       'use strict';
       var $input = document.getElementById(search_id);
       var $resultContent = document.getElementById(content_id);
-      $resultContent.innerHTML = "<ul><span class='local-search-empty'><span></ul>";
-      // $resultContent.innerHTML = "<ul><span class='local-search-empty'>首次搜索，正在载入索引文件，请稍后……<span></ul>";
+      $resultContent.innerHTML = "<ul><span class='local-search-empty'>首次搜索，正在载入索引文件，请稍后……<span></ul>";
       $.ajax({
         // 0x01. load xml file
         url: path,
@@ -286,7 +319,7 @@
               }
               // 0x05. show search results
               if (isMatch) {
-                str += "<li><a href='" + data_url + "' class='search-result-title'><h2>" + orig_data_title + "</h2></a>";
+                str += "<li><a href='" + data_url + "' class='search-result-title'>" + orig_data_title + "</a>";
                 var content = orig_data_content;
                 if (first_occur >= 0) {
                   // cut out 100 characters
@@ -313,9 +346,9 @@
                     match_content = match_content.replace(regS, "<span class=\"search-keyword\">" + keyword + "</span>");
                   });
 
-                  str += "<h3 class=\"search-result-abstract\">" + match_content + "...</h3>"
+                  str += "<p class=\"search-result-abstract\">" + match_content + "...</p>"
                 }
-                str += "<hr></li>";
+                str += "</li>";
               }
             });
             str += "</ul>";
@@ -328,7 +361,7 @@
         error: function(xhr, status, error) {
           $resultContent.innerHTML = ""
           if (xhr.status === 404) {
-            $resultContent.innerHTML = "<ul><span class='local-search-empty'>未找到search.xml文件，具体请参考：<a href='https://github.com/leedom92/hexo-theme-leedom#configuration' target='_black'>configuration</a><span></ul>";
+            $resultContent.innerHTML = "<ul><span class='local-search-empty'>未找到search.xml文件，具体请参考：<a href='https://github.com/zchengsite/hexo-theme-oranges#configuration' target='_black'>configuration</a><span></ul>";
           } else {
             $resultContent.innerHTML = "<ul><span class='local-search-empty'>请求失败，尝试重新刷新页面或稍后重试。<span></ul>";
           }
@@ -349,6 +382,41 @@
 
 
 
+        
+  <div class="tools-bar-item theme-icon" id="switch-color-scheme">
+    <a href="javascript: void(0)">
+      <i id="theme-icon" class="iconfont icon-moon"></i>
+    </a>
+  </div>
+
+  
+<script src="/js/colorscheme.js"></script>
+
+
+
+
+
+        
+  
+  
+<script src="/js/shares.js"></script>
+
+
+
+      </div>
     </div>
-  </body>
+  
+        <style>
+            [bg-lazy] {
+                background-image: none !important;
+                background-color: #eee !important;
+            }
+        </style>
+        <script>
+            window.imageLazyLoadSetting = {
+                isSPA: false,
+                preloadRatio: 1,
+                processImages: null,
+            };
+        </script><script>window.addEventListener("load",function(){var t=/\.(gif|jpg|jpeg|tiff|png)$/i,r=/^data:image\/[a-z]+;base64,/;Array.prototype.slice.call(document.querySelectorAll("img[data-original]")).forEach(function(a){var e=a.parentNode;"A"===e.tagName&&(e.href.match(t)||e.href.match(r))&&(e.href=a.dataset.original)})});</script><script>!function(r){r.imageLazyLoadSetting.processImages=t;var e=r.imageLazyLoadSetting.isSPA,n=r.imageLazyLoadSetting.preloadRatio||1,c=a();function a(){var t=Array.prototype.slice.call(document.querySelectorAll("img[data-original]")),e=Array.prototype.slice.call(document.querySelectorAll("[bg-lazy]"));return t.concat(e)}function t(){e&&(c=a());for(var t,o=0;o<c.length;o++)0<=(t=(t=c[o]).getBoundingClientRect()).bottom&&0<=t.left&&t.top<=(r.innerHeight*n||document.documentElement.clientHeight*n)&&function(){var t,e,n,a,i=c[o];e=function(){c=c.filter(function(t){return i!==t}),r.imageLazyLoadSetting.onImageLoaded&&r.imageLazyLoadSetting.onImageLoaded(i)},(t=i).hasAttribute("bg-lazy")?(t.removeAttribute("bg-lazy"),e&&e()):(n=new Image,a=t.getAttribute("data-original"),n.onload=function(){t.src=a,t.removeAttribute("data-original"),e&&e()},t.src!==a&&(n.src=a))}()}function i(){clearTimeout(t.tId),t.tId=setTimeout(t,500)}t(),document.addEventListener("scroll",i),r.addEventListener("resize",i),r.addEventListener("orientationchange",i)}(this);</script></body>
 </html>

@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="zh-CN" color-mode="light">
 
   <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="keywords" content="" />
+  
   <meta name="author" content="u038dsc" />
   <meta name="description" content="" />
   
@@ -14,7 +14,9 @@
       一些杂项 
       
       
+      |
     
+     the blog of dsc
   </title>
 
   
@@ -23,190 +25,311 @@
   
 
   <!-- Raleway-Font -->
-  <link href="https://fonts.googleapis.com/css?family=Montserrat|Roboto:400,400italic,600|Roboto+Mono" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Raleway&display=swap" rel="stylesheet">
 
   <!-- hexo site css -->
-  
-<link rel="stylesheet" href="/css/base.css">
-<link rel="stylesheet" href="/css/common.css">
-<link rel="stylesheet" href="/iconfont/iconfont.css">
-
-
-  
-
-  
-    
-<link rel="stylesheet" href="/css/post.css">
-
+  <link rel="stylesheet" href="/css/main.css" />
+  <link rel="stylesheet" href="//at.alicdn.com/t/font_1886449_67xjft27j1l.css" />
+  <!-- 代码块风格 -->
   
 
   <!-- jquery3.3.1 -->
-  <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+  
+    <script defer type="text/javascript" src="/plugins/jquery.min.js"></script>
+  
 
   <!-- fancybox -->
-  <link href="https://cdn.bootcss.com/fancybox/3.5.2/jquery.fancybox.min.css" rel="stylesheet">
-  <script async src="https://cdn.bootcss.com/fancybox/3.5.2/jquery.fancybox.min.js"></script>
+  
+    <link href="/plugins/jquery.fancybox.min.css" rel="stylesheet">
+    <script defer type="text/javascript" src="/plugins/jquery.fancybox.min.js"></script>
+  
   
 <script src="/js/fancybox.js"></script>
 
 
+  
+
+  
+
+  <script>
+    var html = document.documentElement
+    const colorMode = localStorage.getItem('color-mode')
+    if (colorMode) {
+      document.documentElement.setAttribute('color-mode', colorMode)
+    }
+  </script>
 <meta name="generator" content="Hexo 7.0.0"></head>
 
 
   <body>
     <div id="app">
       <div class="header">
-  <a href="/">LEEDOM</a>
+  <div class="avatar">
+    <a href="/">
+      <!-- 头像取消懒加载，添加no-lazy -->
+      
+        <img no-lazy src="/images/avatar.png" alt="">
+      
+    </a>
+    <div class="nickname"><a href="/">Oranges</a></div>
+  </div>
+  <div class="navbar">
+    <ul>
+      
+        <li class="nav-item" data-path="/">
+          <a href="/">Home</a>
+        </li>
+      
+        <li class="nav-item" data-path="/archives/">
+          <a href="/archives/">Archives</a>
+        </li>
+      
+        <li class="nav-item" data-path="/tags/">
+          <a href="/tags/">Tags</a>
+        </li>
+      
+        <li class="nav-item" data-path="/friends/">
+          <a href="/friends/">Friends</a>
+        </li>
+      
+        <li class="nav-item" data-path="/about/">
+          <a href="/about/">About</a>
+        </li>
+      
+    </ul>
+  </div>
 </div>
 
 
-      <p class="links">
-  
-    <a title="archives" target="" href="/archives/">
-      <i class="iconfont icon-bookmark"></i>
-    </a>
-  
-    <a title="github" target="_blank" href="https://github.com/leedom92/hexo-theme-leedom">
-      <i class="iconfont icon-github"></i>
-    </a>
-  
-    <a title="email" target="" href="">
-      <i class="iconfont icon-envelope"></i>
-    </a>
-  
-    <a title="facebook" target="" href="">
-      <i class="iconfont icon-facebooksquare"></i>
-    </a>
-  
-    <a title="twitter" target="" href="">
-      <i class="iconfont icon-twitter"></i>
-    </a>
-  
-    <a title="wechat" target="" href="">
-      <i class="iconfont icon-wechat"></i>
-    </a>
-  
-    <a title="weibo" target="" href="">
-      <i class="iconfont icon-weibo"></i>
-    </a>
-  
-    <a title="rss" target="_blank" href="/atom.xml">
-      <i class="iconfont icon-rss"></i>
-    </a>
-  
-</p>
+<script src="/js/activeNav.js"></script>
 
 
-      <div class="main">
+
+      <div class="flex-container">
         <!-- 文章详情页，展示文章具体内容，url形式：https://yoursite/文章标题/ -->
 <!-- 同时为「标签tag」，「朋友friend」，「分类categories」，「关于about」页面的承载页面，具体展示取决于page.type -->
 
-<!-- LaTex Display -->
-<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-<script type="text/javascript" id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js">
-</script>
-<script>
-  MathJax = {
-    tex: {
-      inlineMath: [['$', '$'], ['\\(', '\\)']]
-    }
-  };
-</script>
 
-<div class="post">
-  <h3 class="date">
-    Nov 14, 2023
-  </h3>
-  <h1>
-    一些杂项
-  </h1>
-  <div class="content markdown-body">
-    <p>基础:</p>
-<blockquote>
-<p>贪心，模拟，二分</p>
-</blockquote>
+  <!-- LaTex Display -->
+
+  
+    <script async type="text/javascript" src="/plugins/mathjax/tex-chtml.js"></script>
+  
+  <script>
+    MathJax = {
+      tex: {
+        inlineMath: [['$', '$'], ['\\(', '\\)']]
+      }
+    }
+  </script>
+
+
+
+
+
+  <!-- clipboard -->
+
+  
+    <script async type="text/javascript" src="/plugins/clipboard.min.js"></script>
+  
+  
+<script src="/js/codeCopy.js"></script>
+
+
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  <!-- 文章内容页 url形式：https://yoursite/文章标题/ -->
+  <div class="container post-details" id="post-details">
+    <div class="post-content">
+      <div class="post-title">一些杂项</div>
+      <div class="post-attach">
+        <span class="post-pubtime">
+          <i class="iconfont icon-updatetime mr-10" title="更新时间"></i>
+          2023-11-14 20:49:14
+        </span>
+        
+              <span class="post-tags">
+                <i class="iconfont icon-tags mr-10" title="标签"></i>
+                
+                <span class="span--tag mr-8">
+                  <a href="/tags/noip%E7%AE%97%E6%B3%95/" title="noip算法">
+                    #noip算法
+                  </a>
+                </span>
+                
+              </span>
+          
+      </div>
+      <div class="markdown-body">
+        <p>第一次使用这玩意儿，随便发个东西试试</p>
+<span id="more"></span>
+
+<p>基础:</p>
+<ul>
+<li>贪心，模拟，二分</li>
+</ul>
 <p>图论：</p>
-<blockquote>
-<p>最短路(dijkstra,floyed,spfa)</p>
-<p>次短路<br>tarjan 缩点(解决有向图强连通会了，边双、点双还不是很会)</p>
-<p>2-sat 限制选&#x2F;不选，用Tarjan解决。</p>
-<p>网络流(dinic)，二分图也可用网络流解决</p>
-</blockquote>
+<ul>
+<li><p>最短路(dijkstra,floyed,spfa)</p>
+</li>
+<li><p>次短路</p>
+</li>
+<li><p>tarjan 缩点(解决有向图强连通会了，边双、点双还不是很会)</p>
+</li>
+<li><p>2-sat 限制选&#x2F;不选，用Tarjan解决。</p>
+</li>
+<li><p>网络流(dinic)，二分图也可用网络流解决</p>
+</li>
+</ul>
 <p>树论：</p>
-<blockquote>
-<p>LCA</p>
-<p>树链剖分(重链剖分，长链剖分)</p>
-<p>dsu on tree(树上启发式合并)</p>
-<p>最小生成树(kruskal(排序后并查集))</p>
-<p>次小生成树(最小生成树后枚举每一个没有在最小生成树上的边)</p>
-<p>点分治 在查询链信息时考虑</p>
-</blockquote>
+<ul>
+<li>LCA</li>
+<li>树链剖分(重链剖分，长链剖分)</li>
+<li>dsu on tree(树上启发式合并)</li>
+<li>最小生成树(kruskal(排序后并查集))</li>
+<li>次小生成树(最小生成树后枚举每一个没有在最小生成树上的边)</li>
+<li>点分治 在查询链信息时考虑</li>
+</ul>
 <p>dp: </p>
-<blockquote>
-<p>普通dp</p>
-<p>数位dp</p>
-<p>dp优化</p>
-<blockquote>
-<p>若维护可行性：bitset优化</p>
-<p>单调队列优化</p>
-<p>斜率优化</p>
-<p>四边形不等式优化(不太会)</p>
-</blockquote>
-</blockquote>
+<ul>
+<li>普通dp</li>
+<li>数位dp</li>
+<li>dp优化<ul>
+<li>若维护可行性：bitset优化</li>
+<li>单调队列优化</li>
+<li>斜率优化</li>
+<li>四边形不等式优化(不太会)</li>
+</ul>
+</li>
+</ul>
 <p>数据结构：</p>
-<blockquote>
-<p>线段树、树状数组</p>
-<p>平衡树(fhq)</p>
-<p>主席树(可持久化线段树)</p>
-<p>扫描线</p>
-<p>堆（priority_queue)</p>
-</blockquote>
+<ul>
+<li>线段树、树状数组</li>
+<li>平衡树(fhq)</li>
+<li>主席树(可持久化线段树)</li>
+<li>扫描线</li>
+<li>堆（priority_queue)</li>
+</ul>
 <p>根号算法：</p>
-<blockquote>
-<p>莫队</p>
-<p>分块</p>
-</blockquote>
+<ul>
+<li>莫队</li>
+<li>分块</li>
+</ul>
 <p>数论：</p>
-<blockquote>
-<p>gcd,exgcd</p>
-<p>组合数</p>
-</blockquote>
+<ul>
+<li>gcd,exgcd</li>
+<li>组合数</li>
+</ul>
 <p>字符串：</p>
-<blockquote>
-<p>sam，sa</p>
-<p><del>hash+二分</del></p>
-</blockquote>
+<ul>
+<li>sam，sa</li>
+<li><del>hash+二分</del></li>
+</ul>
 <p>奇淫技巧：</p>
-<blockquote>
-<p>随机哈希</p>
-<p>set</p>
-</blockquote>
-<p>$$<br>\sqrt{a}<br>$$</p>
+<ul>
+<li>随机哈希</li>
+<li>set</li>
+</ul>
+
+      </div>
+      
+        <div class="prev-or-next">
+          <div class="post-foot-next">
+            
+          </div>
+          <div class="post-attach">
+            <span class="post-pubtime">
+              <i class="iconfont icon-updatetime mr-10" title="更新时间"></i>
+              2023-11-14 20:49:14
+            </span>
+            
+                  <span class="post-tags">
+                    <i class="iconfont icon-tags mr-10" title="标签"></i>
+                    
+                    <span class="span--tag mr-8">
+                      <a href="/tags/noip%E7%AE%97%E6%B3%95/" title="noip算法">
+                        #noip算法
+                      </a>
+                    </span>
+                    
+                  </span>
+              
+          </div>
+          <div class="post-foot-prev">
+            
+              <a href="/2023/11/14/%E6%AC%A2%E8%BF%8E/" target="_self">
+                <span>下一页</span>
+                <i class="iconfont icon-chevronright"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+    </div>
+    
+
+    
+      <div class="comments-container">
+        
+
+
+
+
+
+
+
+      </div>
+    
+  </div>
+
+
+        
+<div class="footer">
+  <div class="social">
+    <ul>
+      
+        <li>
+          
+              <a title="github" target="_blank" rel="noopener" href="https://github.com/zchengsite/hexo-theme-oranges">
+                <i class="iconfont icon-github"></i>
+              </a>
+              
+        </li>
+        
+    </ul>
   </div>
   
     
-        
-            
-</div>
-        <div class="footer">
-  
     <div class="footer-more">
       
-        <a target="_blank" rel="noopener" href="https://github.com/leedom92/hexo-theme-leedom">Copyright © Leedom 2021</a>
+        <a target="_blank" rel="noopener" href="https://github.com/zchengsite/hexo-theme-oranges">Copyright © 2023 Oranges</a>
         
     </div>
   
+    
     <div class="footer-more">
       
-        <a target="_blank" rel="noopener" href="https://github.com/leedom92/hexo-theme-leedom">Theme by Leedom | Powered by Hexo</a>
+        <a target="_blank" rel="noopener" href="https://github.com/zchengsite/hexo-theme-oranges">Theme by Oranges | Powered by Hexo</a>
         
     </div>
+  
   
 </div>
 
       </div>
 
-      <div class="back-to-top hidden">
+      <div class="tools-bar">
+        <div class="back-to-top tools-bar-item hidden">
   <a href="javascript: void(0)">
     <i class="iconfont icon-chevronup"></i>
   </a>
@@ -217,8 +340,8 @@
 
 
 
-      
-  <div class="search-icon" id="search-icon">
+        
+  <div class="search-icon tools-bar-item" id="search-icon">
     <a href="javascript: void(0)">
       <i class="iconfont icon-search"></i>
     </a>
@@ -226,24 +349,22 @@
 
   <div class="search-overlay hidden">
     <div class="search-content" tabindex="0">
-      <div class="search-box">
-        <div class="search-title">
-          <!-- <span class="search-icon-input">
-            <a href="javascript: void(0)">
-              <i class="iconfont icon-search"></i>
-            </a>
-          </span> -->
-          
-            <input type="text" class="search-input" id="search-input" placeholder="搜索...">
-          
-          <span class="search-close-icon" id="search-close-icon">
-            <a href="javascript: void(0)">
-              <i class="iconfont icon-close"></i>
-            </a>
-          </span>
-        </div>
-        <div class="search-result" id="search-result"></div>
+      <div class="search-title">
+        <span class="search-icon-input">
+          <a href="javascript: void(0)">
+            <i class="iconfont icon-search"></i>
+          </a>
+        </span>
+        
+          <input type="text" class="search-input" id="search-input" placeholder="搜索...">
+        
+        <span class="search-close-icon" id="search-close-icon">
+          <a href="javascript: void(0)">
+            <i class="iconfont icon-close"></i>
+          </a>
+        </span>
       </div>
+      <div class="search-result" id="search-result"></div>
     </div>
   </div>
 
@@ -251,10 +372,10 @@
     var inputArea = document.querySelector("#search-input")
     var searchOverlayArea = document.querySelector(".search-overlay")
 
-    // inputArea.onclick = function() {
-    //   getSearchFile()
-    //   this.onclick = null
-    // }
+    inputArea.onclick = function() {
+      getSearchFile()
+      this.onclick = null
+    }
 
     inputArea.onkeydown = function() {
       if(event.keyCode == 13)
@@ -266,8 +387,7 @@
       if (isHidden) {
         searchOverlayArea.classList.remove('hidden')
         document.body.classList.add('hidden')
-        inputArea.focus()
-        getSearchFile()
+        // inputArea.focus()
       } else {
         searchOverlayArea.classList.add('hidden')
         document.body.classList.remove('hidden')
@@ -288,8 +408,7 @@
       'use strict';
       var $input = document.getElementById(search_id);
       var $resultContent = document.getElementById(content_id);
-      $resultContent.innerHTML = "<ul><span class='local-search-empty'><span></ul>";
-      // $resultContent.innerHTML = "<ul><span class='local-search-empty'>首次搜索，正在载入索引文件，请稍后……<span></ul>";
+      $resultContent.innerHTML = "<ul><span class='local-search-empty'>首次搜索，正在载入索引文件，请稍后……<span></ul>";
       $.ajax({
         // 0x01. load xml file
         url: path,
@@ -351,7 +470,7 @@
               }
               // 0x05. show search results
               if (isMatch) {
-                str += "<li><a href='" + data_url + "' class='search-result-title'><h2>" + orig_data_title + "</h2></a>";
+                str += "<li><a href='" + data_url + "' class='search-result-title'>" + orig_data_title + "</a>";
                 var content = orig_data_content;
                 if (first_occur >= 0) {
                   // cut out 100 characters
@@ -378,9 +497,9 @@
                     match_content = match_content.replace(regS, "<span class=\"search-keyword\">" + keyword + "</span>");
                   });
 
-                  str += "<h3 class=\"search-result-abstract\">" + match_content + "...</h3>"
+                  str += "<p class=\"search-result-abstract\">" + match_content + "...</p>"
                 }
-                str += "<hr></li>";
+                str += "</li>";
               }
             });
             str += "</ul>";
@@ -393,7 +512,7 @@
         error: function(xhr, status, error) {
           $resultContent.innerHTML = ""
           if (xhr.status === 404) {
-            $resultContent.innerHTML = "<ul><span class='local-search-empty'>未找到search.xml文件，具体请参考：<a href='https://github.com/leedom92/hexo-theme-leedom#configuration' target='_black'>configuration</a><span></ul>";
+            $resultContent.innerHTML = "<ul><span class='local-search-empty'>未找到search.xml文件，具体请参考：<a href='https://github.com/zchengsite/hexo-theme-oranges#configuration' target='_black'>configuration</a><span></ul>";
           } else {
             $resultContent.innerHTML = "<ul><span class='local-search-empty'>请求失败，尝试重新刷新页面或稍后重试。<span></ul>";
           }
@@ -414,6 +533,59 @@
 
 
 
+        
+  <div class="tools-bar-item theme-icon" id="switch-color-scheme">
+    <a href="javascript: void(0)">
+      <i id="theme-icon" class="iconfont icon-moon"></i>
+    </a>
+  </div>
+
+  
+<script src="/js/colorscheme.js"></script>
+
+
+
+
+
+        
+  
+    <div class="share-icon tools-bar-item">
+      <a href="javascript: void(0)" id="share-icon">
+        <i class="iconfont iconshare"></i>
+      </a>
+      <div class="share-content hidden">
+        
+          <a class="share-item" href="https://twitter.com/intent/tweet?text=' + %E4%B8%80%E4%BA%9B%E6%9D%82%E9%A1%B9 + '&url=' + http%3A%2F%2Fexample.com%2F2023%2F11%2F14%2F%25E4%25B8%2580%25E4%25BA%259B%25E6%259D%2582%25E9%25A1%25B9%2F + '" target="_blank" title="Twitter">
+            <i class="iconfont icon-twitter"></i>
+          </a>
+        
+        
+          <a class="share-item" href="https://www.facebook.com/sharer.php?u=http://example.com/2023/11/14/%E4%B8%80%E4%BA%9B%E6%9D%82%E9%A1%B9/" target="_blank" title="Facebook">
+            <i class="iconfont icon-facebooksquare"></i>
+          </a>
+        
+      </div>
     </div>
-  </body>
+  
+  
+<script src="/js/shares.js"></script>
+
+
+
+      </div>
+    </div>
+  
+        <style>
+            [bg-lazy] {
+                background-image: none !important;
+                background-color: #eee !important;
+            }
+        </style>
+        <script>
+            window.imageLazyLoadSetting = {
+                isSPA: false,
+                preloadRatio: 1,
+                processImages: null,
+            };
+        </script><script>window.addEventListener("load",function(){var t=/\.(gif|jpg|jpeg|tiff|png)$/i,r=/^data:image\/[a-z]+;base64,/;Array.prototype.slice.call(document.querySelectorAll("img[data-original]")).forEach(function(a){var e=a.parentNode;"A"===e.tagName&&(e.href.match(t)||e.href.match(r))&&(e.href=a.dataset.original)})});</script><script>!function(r){r.imageLazyLoadSetting.processImages=t;var e=r.imageLazyLoadSetting.isSPA,n=r.imageLazyLoadSetting.preloadRatio||1,c=a();function a(){var t=Array.prototype.slice.call(document.querySelectorAll("img[data-original]")),e=Array.prototype.slice.call(document.querySelectorAll("[bg-lazy]"));return t.concat(e)}function t(){e&&(c=a());for(var t,o=0;o<c.length;o++)0<=(t=(t=c[o]).getBoundingClientRect()).bottom&&0<=t.left&&t.top<=(r.innerHeight*n||document.documentElement.clientHeight*n)&&function(){var t,e,n,a,i=c[o];e=function(){c=c.filter(function(t){return i!==t}),r.imageLazyLoadSetting.onImageLoaded&&r.imageLazyLoadSetting.onImageLoaded(i)},(t=i).hasAttribute("bg-lazy")?(t.removeAttribute("bg-lazy"),e&&e()):(n=new Image,a=t.getAttribute("data-original"),n.onload=function(){t.src=a,t.removeAttribute("data-original"),e&&e()},t.src!==a&&(n.src=a))}()}function i(){clearTimeout(t.tId),t.tId=setTimeout(t,500)}t(),document.addEventListener("scroll",i),r.addEventListener("resize",i),r.addEventListener("orientationchange",i)}(this);</script></body>
 </html>
