@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>about me</title>
+      <link href="/2023/11/15/about%20me/"/>
+      <url>/2023/11/15/about%20me/</url>
+      
+        <content type="html"><![CDATA[]]></content>
+      
+      
+      <categories>
+          
+          <category> 介绍 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 其它 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>欢迎</title>
       <link href="/2023/11/14/%E6%AC%A2%E8%BF%8E/"/>
       <url>/2023/11/14/%E6%AC%A2%E8%BF%8E/</url>
@@ -27,7 +52,7 @@
       <link href="/2023/11/14/%E4%B8%80%E4%BA%9B%E6%9D%82%E9%A1%B9/"/>
       <url>/2023/11/14/%E4%B8%80%E4%BA%9B%E6%9D%82%E9%A1%B9/</url>
       
-        <content type="html"><![CDATA[<h2 id="杂项"><a href="#杂项" class="headerlink" title="杂项"></a>杂项</h2><p>第一次使用这玩意儿，随便发个东西试试</p><span id="more"></span><h4 id="基础"><a href="#基础" class="headerlink" title="基础:"></a>基础:</h4><ul><li>贪心，模拟，二分</li></ul><h4 id="图论："><a href="#图论：" class="headerlink" title="图论："></a>图论：</h4><ul><li><p>最短路(dijkstra,floyed,spfa)</p></li><li><p>次短路</p></li><li><p>tarjan 缩点(解决有向图强连通会了，边双、点双还不是很会)</p></li><li><p>2-sat 限制选&#x2F;不选，用Tarjan解决。</p></li><li><p>网络流(dinic)，二分图也可用网络流解决</p></li></ul><h4 id="树论："><a href="#树论：" class="headerlink" title="树论："></a>树论：</h4><ul><li>LCA</li><li>树链剖分(重链剖分，长链剖分)</li><li>dsu on tree(树上启发式合并)</li><li>最小生成树(kruskal(排序后并查集))</li><li>次小生成树(最小生成树后枚举每一个没有在最小生成树上的边)</li><li>点分治 在查询链信息时考虑</li></ul><h4 id="dp"><a href="#dp" class="headerlink" title="dp:"></a>dp:</h4><ul><li>普通dp</li><li>数位dp</li><li>dp优化<ul><li>若维护可行性：bitset优化</li><li>单调队列优化</li><li>斜率优化</li><li>四边形不等式优化(不太会)</li></ul></li></ul><h4 id="数据结构："><a href="#数据结构：" class="headerlink" title="数据结构："></a>数据结构：</h4><ul><li>线段树、树状数组</li><li>平衡树(fhq)</li><li>主席树(可持久化线段树)</li><li>扫描线</li><li>堆（priority_queue)</li></ul><h4 id="根号算法："><a href="#根号算法：" class="headerlink" title="根号算法："></a>根号算法：</h4><ul><li>莫队</li><li>分块</li></ul><h4 id="数论："><a href="#数论：" class="headerlink" title="数论："></a>数论：</h4><ul><li>gcd,exgcd</li><li>组合数</li></ul><h4 id="字符串："><a href="#字符串：" class="headerlink" title="字符串："></a>字符串：</h4><ul><li>sam，sa</li><li><del>hash+二分</del></li></ul><h4 id="奇淫技巧："><a href="#奇淫技巧：" class="headerlink" title="奇淫技巧："></a>奇淫技巧：</h4><ul><li>随机哈希</li><li>set</li></ul>]]></content>
+        <content type="html"><![CDATA[<div class="hbe hbe-container" id="hexo-blog-encrypt" data-wpm="Oh, this is an invalid password. Check and try again, please." data-whm="OOPS, these decrypted content may changed, but you can still have a look.">  <script id="hbeData" type="hbeData" data-hmacdigest="0f85f71be4d5c05bef8a4a7e8e33d51b48de37a05374fc81fba4e4fa30f8404c">3c5cef10c9e5657122c2c4e11359ac9159113d43ce22f1ed9e6ed1e569435d317c83b1ea464b4c65bf40cf32141a2c7da64fc5ad1b3a4ccb5e6a7b5dc3c25a664d3e3800dd1ae75c5e0d2787045f00b35aab60c19ef693316e5df1e507246743fbf723dd012719e9a43e5f79b9e85feb238507456b64b0b1ca2f16ab2e2879f68adb5f7b292b3113cc20b44e8d92fd1faa298b8af4a11d7bad951452c2bab0ac5fcef2b6b05920607ed99a18b7737b5726a53ca91542dd51e707274e179bc0a18b84769be70f24844b56cafaff42d24be618b486e7430cfb5edf7b585da43f53013642fb0306f4ef46cb3b538b30e6818358348b2fc487cadd769b808aa145f122a22cfa88fe12b056ff6407b0bee3d55b9a72ce2f7bf6d7dd26292710de78964bef0812fd7104aac909719650f1534abb9a6527bf496bbc2ecb3debbefb7ca002bb92acf4c9add6c022dd42020d7f721f1db77fb15fd2caf228df6ce60b766752889b0bbcbafbc814b0422db663db5498ce17a13404eb3bdd77f83d4e33f326bf52647cb4dcfa749e1e3c37eac8edbe688a0c7d5666f883595f383099c8ca48a4eda65a190feaca06fde168337c91353a702eb180e8ffc518d665cc0f2f2b50e8d8f7bdebfa3b65eb7cfeb306c4bdf1cf7a1763a90d51e3789a8117798fdb2bc36e48f0814a360ac00040e39d72b517cc3a26691de789a00b2a1447cf8c17fbd9e4e901c7da72dbbf671d92923733b9320ae77dbb1b118dcfa45c91f556a389f6ba32ee3d43e1857bb387f31465188469c4e86d7604a095b86f665444d2b0034a02369c5692ee6a6b0920353d9997adf393a12e15e3a2b90efc9c4026102ff0e203256a0e2c84821fd5922672169f9570a872afb4f8d934b620dff2c88322c07b5b3f0226624bf27e1d38e52140e97eb00dd0497e68fa547e31c953cfc419f5896c8ec55fee5685d3728069f01bd16b43ef413d9e85ada9ba75bbef635884f84e35a9ff465e3d069bed515a279422a1a40087dc4606acf69c77e74c3624ec28d15bd51c9989b992df442ef6d3d909f64f9275a267690fed153fce8de0d1a630a6808867866541b33ef52db54846e4a0468e337510c2594e372ed4b8953c64cdea1cbb6a352afbe1b8c65a7793ac6bbcf7ae64545606d570d5c59c19c8649e6e59aa791ab49ae0aa775dbcf35ab0e53561ae005fd4d71d74395a71d1690c00c3fbc0236fe92d283b96fdfee32c7ab02c6b448dfb06e7de1df3502b8a263cb9f552d2cafb1396be0ec1b23bad0cc345684fa611f0478da6e432960263d0293be4f3fc7af36df7f393f9a4ec5f826e5edb1227fbebb406c610935e7ad04c18504f8efa4252c18b4c05549d23535638831a25af26e7b7a91a82e9da4382b08c929a124442b51eba40f2b1358f5167ddc89dbd42b4473a4b3c52c6c5decb7d2d8879e8ee6af40d7299eb9af387b4f8d9ae21885199ff2d912570088be59ef1bd38cd770e666a6f6ae04b1ba60f50b7c26f89e4d68efef9f36870400be22cfb57166626cd339f93902a730fdf6cf73efc2cbcd30e42a123abb20c35eae7eacc6d225b264d6ca102593051fa6c1b4791bd69e91c004b449bce342046c16e9c3511736120792e98b69eecb037220c7cf1c0a1b577dc5cc7dc2e1495f118f8d5a6ee3b52cef5002c4e606bece150efba51a1b0220aa6320ec440ba8cb90d74cc6d47f0f0e6443b251f4e53227096e65e5970a9417a431c3405fdc9926bd0110ae5a49d6605b082d450c384ba853bb7474dfc39eceaf20cde2d3427ac58a171541f5d69e57e802e4fae2b4669cb03a1724d6528c71dc09e8335d0b9e13de38fc43ce71e5d49510d03dd9e35fd1959759af58b90b4443d825895eb653aa831a038823e26d2b93da206a227b5f74869cceb032dff282aaec3058d5e9d6ff846ae23febb72fd4f34bb1bd4365f0479318d24ab075d7a700ac2fc7d53a1a328b65d07211a537c7715253927927488d1fbef993382a0ec8fc48782d6e0d40146de0c77ddbdb2389e230e8e05484fe96209f9ecf7c4c3108229922789b77c0cd41a8172f81974896a414514926facfccdd9bdcf49d7b5fca6713c8f6fae7a8b732287e0f8ba1d4ab541250d54f58e5e8e8bd5ea1913f4d08d28c05f8a9478608006b1e738cb9ab395bdb1c37ef7bd9ef3f3c5f6418e1c7a88e8a03c25b6a8db6ba144e4f5ec1ba219f753c05de6b9edbcedd810150abf2c8e73d6a489276d09423a94b286815e8430fb69a37aa9537b7ceb3b8d5ef2807e884d8e8835dbcd309c385a105fc5c60a489143288fda1b50cc275493cefe647ce074195515d0a06a401cd5712739495687b53ef65d1af15b966c00880c2228bdc18a7c2d5edc95ffc5763f1f9639bc1993dc7a2bf5c805d04dc1cf8059ff0196ff4573495f9504d00524c79ad358891d4d48f806620b080e88888420428e3c34e488acef418c2f64be64facefb5b0172546728d4fecacd262f4a6f5f8e96aa8ecb8838789dc1998a4e8a8f803ee4cf167c2385248da8a7adcc5055040ce071ef928cb752273dec49b54f0fd2e1301974814790e7b6a88a763bcbc09221f38839fe9c035c9777412420b09e125004136e618f68c25bedf9464a787560326d8739e57f2e22eb4df5c0f71fc5b2fb66593afe7ed1c4b168f491ac50b339ac8ebbd95cad124fab288155e80ea43128839c0f7f24c4f46bdab3fc9b4b79aef11d970137f5d27d881a416eec4f7866420b6f0cbd4761b112f81d27f9b0d238278315425ac58a64b954256e6b60cb2567dafab05e995a8ad93d4bc53aabfb9e4659b0de275ab02a9268788d588d6bad2ed48a769f3f88f90e375996b34f98c03f87ec67b18744cb3d24f7891116a8baebe557d0db7fe4b3a0dee8bace1b4f2be8eee1299bbb09b5d115a0e2c91a6f431067b796863884219661271aa389bccd8b7d6a43c7d17bd74b0a0c2ef863d72ddea7ab275f8afd10bf754830eaab1f4dd1025dbabef4b3ec35e23a87ad733661dac2a99010faf9d4d0b5fb9d4a7d9f077fb56b24af0e410a4a2ef3c38e403cfa01ecb5a3a85d8faebe3c9d12748bf26e4067e66c317908ed7e616aa8354842de45613dc08c7164f327872e89c90d7c6919e6372aa696175282026343df6ee85203d3bdfbd390bc72bcf3187c2202aff390d1d8aed1bc7b47f4ac4c7bc3a08f4c40c569be8a82ae560b19973c4708a6650a1cc3ff05a65dc128af2dfb377d83cc1c804c26d827b7a641d0fa47689ffd03aa025c09df084c23b05a187ef2adbd7296d8bb33bc4c8529b50e94adca33b745b9b6f21b</script>  <div class="hbe hbe-content">    <div class="hbe hbe-input hbe-input-default">      <input class="hbe hbe-input-field hbe-input-field-default" type="password" id="hbePass">      <label class="hbe hbe-input-label hbe-input-label-default" for="hbePass">        <span class="hbe hbe-input-label-content hbe-input-label-content-default">Hey, password is required here.</span>      </label>    </div>  </div></div><script data-pjax src="/lib/hbe.js"></script><link href="/css/hbe.style.css" rel="stylesheet" type="text/css">]]></content>
       
       
       <categories>
