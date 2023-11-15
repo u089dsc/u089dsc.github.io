@@ -11,7 +11,7 @@
   
   <title>
     
-      archive_a: 2023/11 
+      CF160D 题解 
       
       
       |
@@ -110,50 +110,191 @@
 
 
       <div class="flex-container">
-        <!-- 归档页，展示本站所有文章，按照年份降序归类，url形式：https://yoursite/archives/ -->
+        <!-- 文章详情页，展示文章具体内容，url形式：https://yoursite/文章标题/ -->
+<!-- 同时为「标签tag」，「朋友friend」，「分类categories」，「关于about」页面的承载页面，具体展示取决于page.type -->
 
-<!-- last: 按年份把文章分组，当前遍历到的年份 -->
-<!-- now: 当前遍历到的文章的发布年份 -->
 
-<div class="container archives">
-  <div class="post-list">
-    
-        <!-- 后续文章的发布年份呈现 -->
-        <div class="content-title">
-          <h2>
-            <span>2023</span>
-          </h2>
+  <!-- LaTex Display -->
+
+  
+    <script async type="text/javascript" src="/plugins/mathjax/tex-chtml.js"></script>
+  
+  <script>
+    MathJax = {
+      tex: {
+        inlineMath: [['$', '$'], ['\\(', '\\)']]
+      }
+    }
+  </script>
+
+
+
+
+
+  <!-- clipboard -->
+
+  
+    <script async type="text/javascript" src="/plugins/clipboard.min.js"></script>
+  
+  
+<script src="/js/codeCopy.js"></script>
+
+
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  <!-- 文章内容页 url形式：https://yoursite/文章标题/ -->
+  <div class="container post-details" id="post-details">
+    <div class="post-content">
+      <div class="post-title">CF160D 题解</div>
+      <div class="post-attach">
+        <span class="post-pubtime">
+          <i class="iconfont icon-updatetime mr-10" title="更新时间"></i>
+          2023-11-15 15:40:20
+        </span>
+        
+              <span class="post-categories">
+                <i class="iconfont icon-bookmark" title="分类"></i>
+                
+                <span class="span--category">
+                  <a href="/categories/%E9%A2%98%E8%A7%A3/" title="题解">
+                    <b>#</b> 题解
+                  </a>
+                </span>
+                
+              </span>
+          
+              <span class="post-tags">
+                <i class="iconfont icon-tags mr-10" title="标签"></i>
+                
+                <span class="span--tag mr-8">
+                  <a href="/tags/tarjan/" title="tarjan">
+                    #tarjan
+                  </a>
+                </span>
+                
+                <span class="span--tag mr-8">
+                  <a href="/tags/kruskal/" title="kruskal">
+                    #kruskal
+                  </a>
+                </span>
+                
+              </span>
+          
+      </div>
+      <div class="markdown-body">
+        <div class="hbe hbe-container" id="hexo-blog-encrypt" data-wpm="Oh, this is an invalid password. Check and try again, please." data-whm="OOPS, these decrypted content may changed, but you can still have a look.">
+  <script id="hbeData" type="hbeData" data-hmacdigest="9bdf857deaffac75aa09f345713ffc9edb9a8433d7a782d0ad317e0e47752d6d">239c02478a0211476504025e6ff96fc06299334955c049116d020fbe0ebc15e561819373a0ed2968ea5ff098fafac8097c7c9ebf80e3b68234bf5cbfb3b5b166085a34a057e11cad2f2e0b2d0f759fb5dfc4a0fa24df651657e4290ce48630056c4334cf70abb63dc306283e7c75e522f6120a78aa53b2e93a30615c138d8c260affc4fc02af724113041848ba7a381eee70e1ec611a382a6d91b7d3d4c6c6d8a0f96e77df996758aee924aebbd7a50a36ccfde62550dd1b2768498444b3e20fcdaff0927a9bdcb1ac542f07487441944f542110c1eabbedfb5570138ace1a4a0c1ab5b651fea1e5882426c98b24960578d2873eaf284274d2dd18da0de19e362ed2fd7904f4f8e9c9e3d59f2c5445f02f063fc24ea2134927ff402e5ff6e7d32dbc521693ec4497be1d9f9322b874ae06184a5c2c6d2e9ac82d28d358f1bb309ed87089cacf7823525d5a730c2cfdcb990b3fa201c92857d000cafcab1cd0fa8dec9e64b5b76f4059d1bab029e790bd4c19fdd2c9d0754cb9eb50a192104959b92cdf61ec582f6ce6e36d6e62a5fa9182af55d479c7b2e40ec062ee8f0c262aebfe8c88c9e2c81bd120c92925b309801cc64c8cffeedbce8c068757f1c0aa02181f5a310cc539396cf5357fc59626fd56d3f55eaf8a2ca6ff6d217575766a9b51cf769496809163c618c90e56617260860fa233b77214fa7b2c107f689e645f34aa73e64149c3ff0815b3841d9c44ab356ce88f842a5f6e4bb17006e15cf3845b91325ac3bc17c3d9c85ac0a26991739ab95ca3bfeb2a05aa7e0c4165e233aded702ebddc9981539afc4d2e9d2c36a44e0b5b99fe83c524bcb13f97f8be967d257aad4b2762b1013da31fcfeb851529f34fac2935935626014a5c32fb091c1b2084ee5a39006a660dcea9162a0cff910d64ada3d976849e424da3c2f7c9680cf5f54c3cd1119c53c8e168fc89fdb3b9e78beba996b1fddf3402031c1669bdeefe9e38b27a32340030cb9c0da64470ce48cb92a6a79d85738fde3e49c3656169530d8b9a7a41be6f9034c3d3d876d74023504bddb5800e8a85757caef0314b1d948a0175594f7da10260f394e52de66d0f619381d97c87c9c8db773f78c67ca522653882505646fce2d38b9abd8c12aab71f7356e2a3ef5698784cafa44f5ce3520a5d3705a31aed25b5b4f34be92046</script>
+  <div class="hbe hbe-content">
+    <div class="hbe hbe-input hbe-input-default">
+      <input class="hbe hbe-input-field hbe-input-field-default" type="password" id="hbePass">
+      <label class="hbe hbe-input-label hbe-input-label-default" for="hbePass">
+        <span class="hbe hbe-input-label-content hbe-input-label-content-default">Hey, password is required here.</span>
+      </label>
+    </div>
+  </div>
+</div>
+<script data-pjax src="/lib/hbe.js"></script><link href="/css/hbe.style.css" rel="stylesheet" type="text/css">
+      </div>
+      
+        <div class="prev-or-next">
+          <div class="post-foot-next">
+            
+              <a href="/2023/11/14/%E6%AC%A2%E8%BF%8E/" target="_self">
+                <i class="iconfont icon-chevronleft"></i>
+                <span>上一页</span>
+              </a>
+            
+          </div>
+          <div class="post-attach">
+            <span class="post-pubtime">
+              <i class="iconfont icon-updatetime mr-10" title="更新时间"></i>
+              2023-11-15 15:40:20
+            </span>
+            
+                  <span class="post-categories">
+                    <i class="iconfont icon-bookmark" title="分类"></i>
+                    
+                    <span class="span--category">
+                      <a href="/categories/%E9%A2%98%E8%A7%A3/" title="题解">
+                        <b>#</b> 题解
+                      </a>
+                    </span>
+                    
+                  </span>
+              
+                  <span class="post-tags">
+                    <i class="iconfont icon-tags mr-10" title="标签"></i>
+                    
+                    <span class="span--tag mr-8">
+                      <a href="/tags/tarjan/" title="tarjan">
+                        #tarjan
+                      </a>
+                    </span>
+                    
+                    <span class="span--tag mr-8">
+                      <a href="/tags/kruskal/" title="kruskal">
+                        #kruskal
+                      </a>
+                    </span>
+                    
+                  </span>
+              
+          </div>
+          <div class="post-foot-prev">
+            
+          </div>
         </div>
       
-      <div class="post-item" title="CF160D 题解">
-        <div class="time-m-d">11-15</div>
-        <div class="title">
-          <a href="/2023/11/15/CF160D-%E9%A2%98%E8%A7%A3/">
-            <span>CF160D 题解</span>
-          </a>
-        </div>
-      </div>
+    </div>
     
-      <div class="post-item" title="欢迎来的我的博客，希望我的文章能对你有所帮助">
-        <div class="time-m-d">11-14</div>
-        <div class="title">
-          <a href="/2023/11/14/%E6%AC%A2%E8%BF%8E/">
-            <span>欢迎来的我的博客，希望我的文章能对你有所帮助</span>
-          </a>
-        </div>
-      </div>
+
     
-      <div class="post-item" title="板子速查">
-        <div class="time-m-d">11-14</div>
-        <div class="title">
-          <a href="/2023/11/14/%E4%B8%80%E4%BA%9B%E6%9D%82%E9%A1%B9/">
-            <span>板子速查</span>
-          </a>
-        </div>
+      <div class="comments-container">
+        
+
+
+
+
+
+
+  <div id="gitalk-container"></div>
+
+  <script>
+    function loadGitalkSuc() {
+      const gitalk = new Gitalk({
+        clientID: '',
+        clientSecret: '',
+        repo: '',
+        owner: '',
+        admin: [''],
+        id: location.pathname,
+        distractionFreeMode: false
+      })
+
+      gitalk.render('gitalk-container')
+    }
+  </script>
+  
+    <link rel="stylesheet" href="/plugins/gitalk.css">
+    <script type="text/javascript" src="/plugins/gitalk.min.js" onload="loadGitalkSuc(this)"></script>
+  
+
+
+
       </div>
     
   </div>
-</div>
+
 
         
 <div class="footer">
