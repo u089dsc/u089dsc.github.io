@@ -4,6 +4,25 @@
   
     
     <entry>
+      <title></title>
+      <link href="/2023/11/15/%E9%9A%8F%E7%AC%94/"/>
+      <url>/2023/11/15/%E9%9A%8F%E7%AC%94/</url>
+      
+        <content type="html"><![CDATA[<p>今天复习算法，终于会写$Tarjan$求割点割边了，真是醉了</p><p>现在一想好像还挺简单？<del>（我才不会说是我之前一直没有用手推一推）</del></p><p>再也不用担心我不会Tarjan了~</p><hr><p>自己切了道$kruskal+$树剖$+$线段树的题，才发现<strong>我之前当这道题$LCA$不会取时就傻傻用倍增调到$LCA$的两个儿子节点上</strong>，但其实树剖只用$dfn[LCA]+1$就可以了。呜呜呜哭死~~~~~~~~~~~~</p><hr><p>做了道矩阵快速幂优化$dp$的题，感觉这种题特征应该比较明显</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 随笔 </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>CF160D 题解</title>
       <link href="/2023/11/15/CF160D-%E9%A2%98%E8%A7%A3/"/>
       <url>/2023/11/15/CF160D-%E9%A2%98%E8%A7%A3/</url>
