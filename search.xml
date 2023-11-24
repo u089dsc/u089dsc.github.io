@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>求导</title>
+      <link href="/2023/11/24/%E6%B1%82%E5%AF%BC/"/>
+      <url>/2023/11/24/%E6%B1%82%E5%AF%BC/</url>
+      
+        <content type="html"><![CDATA[<h2 id="导数基本公式及运算法则"><a href="#导数基本公式及运算法则" class="headerlink" title="导数基本公式及运算法则"></a>导数基本公式及运算法则</h2><table><thead><tr><th>原函数</th><th>导函数</th></tr></thead><tbody><tr><td>$f(x)&#x3D;a$</td><td>$f’(x)&#x3D;0$</td></tr><tr><td>$f(x)&#x3D;x^a$</td><td>$f’(x)&#x3D;ax^{a-1}$</td></tr><tr><td>$f(x)&#x3D;a^x$</td><td>$f’(x)&#x3D;a^x\ln a$</td></tr><tr><td>$f(x)&#x3D;\log_a x$</td><td>$f’(x)&#x3D;\frac{1}{x\ln a}$</td></tr><tr><td>$f(x)&#x3D;\sin x$</td><td>$f’(x)&#x3D;\cos x$</td></tr><tr><td>$f(x)&#x3D;\cos x$</td><td>$f’(x)&#x3D;\sin x$</td></tr><tr><td>$f(x)&#x3D;\tan x$</td><td>$f’(x)&#x3D;\sec^2 x$</td></tr><tr><td>$f(x)&#x3D;\cot x$</td><td>$f’(x)&#x3D;\csc^2 x$</td></tr><tr><td>$f(x)&#x3D;\sec x$</td><td>$f’(x)&#x3D;\sec x\cdot\tan x$</td></tr><tr><td>$f(x)&#x3D;\csc x$</td><td>$f’(x)&#x3D;-\csc x\cdot cot(x)$</td></tr><tr><td>$f(x)&#x3D;\arcsin x$</td><td>$f’(x)&#x3D;\frac{1}{\sqrt{1-x^2}}$</td></tr><tr><td>$f(x)&#x3D;\arccos x$</td><td>$f’(x)&#x3D;\frac{-1}{\sqrt{1-x^2}}$</td></tr><tr><td>$f(x)&#x3D;\arctan x$</td><td>$f’(x)&#x3D;\frac{1}{1+x^2}$</td></tr><tr><td>$f(x)&#x3D;arccot\ x$</td><td>$f’(x)&#x3D;\frac{-1}{1+x^2}$</td></tr><tr><td>$F(x)&#x3D;f(x)\pm g(x)$</td><td>$F’(x)&#x3D;f’(x)\pm g’(x)$</td></tr><tr><td>$F(x)&#x3D;f(x)\cdot g(x)$</td><td>$F’(x)&#x3D;f’(x)\cdot g(x)+f(x)\cdot g’(x)$</td></tr><tr><td>$F(x)&#x3D;\frac{f(x)}{g(x)}$</td><td>$F’(x)&#x3D;\frac{f’(x)\cdot g(x)-f(x)\cdot g’(x)}{g^2(x)}$</td></tr><tr><td>$F(x)&#x3D;f[g(x)]$</td><td>$F’(x)&#x3D;f’[g(x)]g’(x)$</td></tr></tbody></table><p>特别的，</p><p>当$2$中$a&#x3D;e$时，有$f’(x)&#x3D;f(x)&#x3D;e^x$</p><p>当$3$中$a&#x3D;e$时，有$f’(x)&#x3D;\frac{1}{x}$</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 基础 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 数学 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>noip游寄</title>
       <link href="/2023/11/19/noip%E6%B8%B8%E5%AF%84/"/>
       <url>/2023/11/19/noip%E6%B8%B8%E5%AF%84/</url>
@@ -42,7 +67,7 @@
     
     
     <entry>
-      <title>无标题</title>
+      <title></title>
       <link href="/2023/11/15/%E9%9A%8F%E7%AC%94/"/>
       <url>/2023/11/15/%E9%9A%8F%E7%AC%94/</url>
       
@@ -82,19 +107,6 @@
             <tag> kruskal </tag>
             
         </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>欢迎来的我的博客，希望我的文章能对你有所帮助</title>
-      <link href="/2023/11/14/%E6%AC%A2%E8%BF%8E/"/>
-      <url>/2023/11/14/%E6%AC%A2%E8%BF%8E/</url>
-      
-        <content type="html"><![CDATA[<p><a href="https://u089dsc.github.io/">start now</a></p>]]></content>
-      
-      
       
     </entry>
     
