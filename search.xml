@@ -4,6 +4,56 @@
   
     
     <entry>
+      <title>P6078 [CEOI2004] Sweets题解</title>
+      <link href="/2023/12/02/P6078-%5BCEOI2004%5D-Sweets%E9%A2%98%E8%A7%A3/"/>
+      <url>/2023/12/02/P6078-%5BCEOI2004%5D-Sweets%E9%A2%98%E8%A7%A3/</url>
+      
+        <content type="html"><![CDATA[<p>考虑将所有生成函数卷起来，得到<br>$$<br>\begin{aligned}<br>f(x)&amp;&#x3D;\frac{\prod_{i&#x3D;1}^n1-x^{m_i+1}}{(1-x)^n}\\<br>&amp;&#x3D;\prod_{i&#x3D;1}^{n}(1-x^{m_i+1})\cdot\sum_{j\ge0}\binom{n+j-1}{j}x^j\\<br>\end{aligned}<br>$$<br>$n\le10$ ，即可以暴力$dfs$<br>设当前算到的是 $x^k$ ,那么右边会对答案造成影响的项为 $\sum_{i&#x3D;a-k}^{b-k}\binom{n+i-1}{i}x^i$<br>由组合数递推公式 $C_{i}^{j}&#x3D;C_{i-1}^{j-1}+C_{i-1}^{j}$<br>可得:<br>$ C_{n+a}^a\quad&#x3D;\quad 1\quad+\quad\sum_{i&#x3D;1}^{a}C_{n+i-1}^{i} $<br>即设 $x^k$ 系数为 $s$ ,贡献为 $w$<br>$$<br>\begin{aligned}<br>w&amp;&#x3D;s\cdot\sum_{i&#x3D;a-k}^{b-k}\binom{n+i-1}{i}\\<br>&amp;&#x3D;s\cdot\left(\sum_{i&#x3D;1}^{b-k}C_{n+i-1}^i-\sum_{i&#x3D;1}^{a-k-1}C_{n+i-1}^i \right)\\<br>&amp;&#x3D;s\cdot\left((C_{n+b-k}^{b-k}-1)-(C_{n+a-k-1}^{a-k-1}-1)\right)\\<br>&amp;&#x3D;s\cdot\left(C_{n+b-k}^{b-k}-C_{n+a-k-1}^{a-k-1}\right)\\<br>&amp;&#x3D;s\cdot\left(\frac{\prod_{i&#x3D;1}^{n}(i+b-k)}{n!}-\frac{\prod_{i&#x3D;1}^{n}(i+a-k-1)}{n!}\right)<br>\end{aligned}<br>$$</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 题解 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 生成函数(GF) </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Taylor展开</title>
+      <link href="/2023/12/02/2023-12-2-Taylor%E5%B1%95%E5%BC%80/"/>
+      <url>/2023/12/02/2023-12-2-Taylor%E5%B1%95%E5%BC%80/</url>
+      
+        <content type="html"><![CDATA[<p>$$<br>记f(x)的n阶导数为f^{(n)}(x)\\<br>麦克劳林公式：f(x)&#x3D;f(0)+\frac{f^{(1)}(0)}{1!}x+\frac{f^{(2)}(0)}{2!}x^2+\frac{f^{(3)}(0)}{3!}+\cdots\\<br>$$</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 基础 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 多项式 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>bzoj3513题解</title>
       <link href="/2023/12/01/bzoj3513%E9%A2%98%E8%A7%A3/"/>
       <url>/2023/12/01/bzoj3513%E9%A2%98%E8%A7%A3/</url>
@@ -20,9 +70,9 @@
       
         <tags>
             
-            <tag> 数学 </tag>
-            
             <tag> FFT,NTT </tag>
+            
+            <tag> 数学 </tag>
             
         </tags>
       
@@ -72,7 +122,7 @@
       
         <tags>
             
-            <tag> FFT </tag>
+            <tag> FFT,NTT </tag>
             
         </tags>
       

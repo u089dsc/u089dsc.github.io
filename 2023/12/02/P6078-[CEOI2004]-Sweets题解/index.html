@@ -11,7 +11,7 @@
   
   <title>
     
-      标签 
+      P6078 [CEOI2004] Sweets题解 
       
       
       |
@@ -144,21 +144,58 @@
 
 
 
-  <!-- 标签页 url形式：https://yoursite/tags/ -->
-  <div class="container tag-index">
-    <div>
-      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/FFT-NTT/" rel="tag">FFT,NTT</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/kruskal/" rel="tag">kruskal</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/noip%E7%AE%97%E6%B3%95/" rel="tag">noip算法</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/tarjan/" rel="tag">tarjan</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%A4%9A%E9%A1%B9%E5%BC%8F/" rel="tag">多项式</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%95%B0%E5%AD%A6/" rel="tag">数学</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%94%9F%E6%88%90%E5%87%BD%E6%95%B0-GF/" rel="tag">生成函数(GF)</a><span class="tag-list-count">2</span></li></ul>
+
+  
+
+  
+
+  
+
+  
+  <!-- 文章内容页 url形式：https://yoursite/文章标题/ -->
+  <div class="container post-details" id="post-details">
+    <div class="post-content">
+      <div class="post-title">P6078 [CEOI2004] Sweets题解</div>
+      <div class="post-attach">
+        <span class="post-pubtime">
+          <i class="iconfont icon-updatetime mr-10" title="更新时间"></i>
+          2023-12-02 16:25:25
+        </span>
+        
+              <span class="post-categories">
+                <i class="iconfont icon-bookmark" title="分类"></i>
+                
+                <span class="span--category">
+                  <a href="/categories/%E9%A2%98%E8%A7%A3/" title="题解">
+                    <b>#</b> 题解
+                  </a>
+                </span>
+                
+              </span>
+          
+              <span class="post-tags">
+                <i class="iconfont icon-tags mr-10" title="标签"></i>
+                
+                <span class="span--tag mr-8">
+                  <a href="/tags/%E7%94%9F%E6%88%90%E5%87%BD%E6%95%B0-GF/" title="生成函数(GF)">
+                    #生成函数(GF)
+                  </a>
+                </span>
+                
+              </span>
+          
+      </div>
+      <div class="markdown-body">
+        <p>考虑将所有生成函数卷起来，得到<br>$$<br>\begin{aligned}<br>f(x)&amp;&#x3D;\frac{\prod_{i&#x3D;1}^n1-x^{m_i+1}}{(1-x)^n}\\<br>&amp;&#x3D;\prod_{i&#x3D;1}^{n}(1-x^{m_i+1})\cdot\sum_{j\ge0}\binom{n+j-1}{j}x^j\\<br>\end{aligned}<br>$$<br>$n\le10$ ，即可以暴力$dfs$<br>设当前算到的是 $x^k$ ,那么右边会对答案造成影响的项为 $\sum_{i&#x3D;a-k}^{b-k}\binom{n+i-1}{i}x^i$<br>由组合数递推公式 $C_{i}^{j}&#x3D;C_{i-1}^{j-1}+C_{i-1}^{j}$<br>可得:<br>$ C_{n+a}^a\quad&#x3D;\quad 1\quad+\quad\sum_{i&#x3D;1}^{a}C_{n+i-1}^{i} $<br>即设 $x^k$ 系数为 $s$ ,贡献为 $w$<br>$$<br>\begin{aligned}<br>w&amp;&#x3D;s\cdot\sum_{i&#x3D;a-k}^{b-k}\binom{n+i-1}{i}\\<br>&amp;&#x3D;s\cdot\left(\sum_{i&#x3D;1}^{b-k}C_{n+i-1}^i-\sum_{i&#x3D;1}^{a-k-1}C_{n+i-1}^i \right)\\<br>&amp;&#x3D;s\cdot\left((C_{n+b-k}^{b-k}-1)-(C_{n+a-k-1}^{a-k-1}-1)\right)\\<br>&amp;&#x3D;s\cdot\left(C_{n+b-k}^{b-k}-C_{n+a-k-1}^{a-k-1}\right)\\<br>&amp;&#x3D;s\cdot\left(\frac{\prod_{i&#x3D;1}^{n}(i+b-k)}{n!}-\frac{\prod_{i&#x3D;1}^{n}(i+a-k-1)}{n!}\right)<br>\end{aligned}<br>$$</p>
+
+      </div>
+      
     </div>
+    
+
+    
   </div>
-  
 
-  
-
-  
-
-  
-
-  
 
         
 <div class="footer">
