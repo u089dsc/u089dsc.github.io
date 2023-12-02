@@ -11,8 +11,8 @@
   
   <title>
     
-      标签 
-       : noip算法
+      多项式全家桶 
+      
       
       |
     
@@ -110,30 +110,122 @@
 
 
       <div class="flex-container">
-        <!-- 标签详情页，展示某个标签下的文章列表，url形式：https://yoursite/tags/某个标签/ -->
+        <!-- 文章详情页，展示文章具体内容，url形式：https://yoursite/文章标题/ -->
+<!-- 同时为「标签tag」，「朋友friend」，「分类categories」，「关于about」页面的承载页面，具体展示取决于page.type -->
 
-<div class="container tag-details">
-  <div class="content-title">
-    <h2>
-      <span>noip算法</span>
-    </h2>
-  </div>
+
+  <!-- LaTex Display -->
+
   
-    <div class="post-list">
-      <div class="post-item" title="板子速查">
-        <span class="time-m-d">2023-11-14</span>
-        <a href="/2023/11/14/%E4%B8%80%E4%BA%9B%E6%9D%82%E9%A1%B9/">
-          <span>板子速查</span>
-        </a>
+    <script async type="text/javascript" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+  
+  <script>
+    MathJax = {
+      tex: {
+        inlineMath: [['$', '$'], ['\\(', '\\)']]
+      }
+    }
+  </script>
+
+
+
+
+
+  <!-- clipboard -->
+
+  
+    <script async type="text/javascript" src="/plugins/clipboard.min.js"></script>
+  
+  
+<script src="/js/codeCopy.js"></script>
+
+
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  <!-- 文章内容页 url形式：https://yoursite/文章标题/ -->
+  <div class="container post-details" id="post-details">
+    <div class="post-content">
+      <div class="post-title">多项式全家桶</div>
+      <div class="post-attach">
+        <span class="post-pubtime">
+          <i class="iconfont icon-updatetime mr-10" title="更新时间"></i>
+          2023-12-02 17:20:58
+        </span>
+        
+              <span class="post-categories">
+                <i class="iconfont icon-bookmark" title="分类"></i>
+                
+                <span class="span--category">
+                  <a href="/categories/%E6%A8%A1%E6%9D%BF/" title="模板">
+                    <b>#</b> 模板
+                  </a>
+                </span>
+                
+              </span>
+          
+              <span class="post-tags">
+                <i class="iconfont icon-tags mr-10" title="标签"></i>
+                
+                <span class="span--tag mr-8">
+                  <a href="/tags/%E5%A4%9A%E9%A1%B9%E5%BC%8F/" title="多项式">
+                    #多项式
+                  </a>
+                </span>
+                
+              </span>
+          
       </div>
+      <div class="markdown-body">
+        <p>notice:以下均为$n$项式，最高次幂为 $n-1$。</p>
+<h2 id="多项式求逆"><a href="#多项式求逆" class="headerlink" title="多项式求逆"></a>多项式求逆</h2><p>对于函数$f(x)&#x3D;\sum_{i&#x3D;0}^{n-1}a_ix^i$有一函数$g(x)&#x3D;\sum_{i&#x3D;0}^{n-1}b_ix^i$满足$f(x)*g(x)\equiv1\ (mod\ x^n)$此时称$g(x)$为$f(x)$的逆函数。</p>
+<p>设$h(x)&#x3D; g(x)\ (mod\ x^{\lceil\frac{n}{2}\rceil})$</p>
+<p>有$h(x)*f(x)\equiv 1\ (mod\ x^{\lceil\frac{n}{2}\rceil})$</p>
+<p>$g(x)*f(x)\equiv 1\ (mod\ x^{\lceil\frac{n}{2}\rceil})$</p>
+<p>$g(x)-h(x)\equiv\ 0\ (mod\ x^{\lceil\frac{n}{2}\rceil})$</p>
+<p>$(g(x)-h(x))^2\equiv\ 0\ (mod\ x^n)$</p>
+<p>$g^2(x)-2g(x)h(x)+h^2(x)\equiv\ 0\ (mod\ x^n)$</p>
+<p>同时乘上$f(x)$，有</p>
+<p>$g(x)-2h(x)+f(x)h^2(x)\equiv\ 0\ (mod\ x^n)$</p>
+<p>$g(x)&#x3D;(2-f(x)h(x))h(x)\ (mod\ x^n)$</p>
+<h2 id="多项式ln"><a href="#多项式ln" class="headerlink" title="多项式ln"></a>多项式ln</h2><p>即$g(x)&#x3D;\ln f(x)\ (mod\ x^n)$</p>
+<p>（以下均为$mod\ x^n$）</p>
+<p>$g’(x)&#x3D;\frac{f’(x)}{f(x)}$</p>
+
+      </div>
+      
     </div>
+    
+  <div id="btn-catalog" class="btn-catalog">
+    <i class="iconfont icon-catalog"></i>
+  </div>
+  <div class="post-catalog hidden" id="catalog">
+    <div class="title">目录</div>
+    <div class="catalog-content">
+      
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%A4%9A%E9%A1%B9%E5%BC%8F%E6%B1%82%E9%80%86"><span class="toc-text">多项式求逆</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%A4%9A%E9%A1%B9%E5%BC%8Fln"><span class="toc-text">多项式ln</span></a></li></ol>
+      
+    </div>
+  </div>
+
   
-  <nav class="post-navigation">
+<script src="/js/catalog.js"></script>
+
+
+
+
     
-    <span class="page-num">1 / 1</span>
-    
-  </nav>
-</div>
+  </div>
+
 
         
 <div class="footer">
@@ -154,7 +246,7 @@
     
     <div class="footer-more">
       
-        <a target="_blank" rel="noopener" href="https://github.com/zchengsite/hexo-theme-oranges">Copyright © 2023 Oranges</a>
+        <a target="_blank" rel="noopener" href="https://github.com/u089dsc/u089dsc.github.io/">Copyright © 2023 u089dsc</a>
         
     </div>
   
