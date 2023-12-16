@@ -4,6 +4,58 @@
   
     
     <entry>
+      <title>LOJ#6686. Stupid GCD题解</title>
+      <link href="/2023/12/16/LOJ#6686Stupid-GCD%E9%A2%98%E8%A7%A3/"/>
+      <url>/2023/12/16/LOJ#6686Stupid-GCD%E9%A2%98%E8%A7%A3/</url>
+      
+        <content type="html"><![CDATA[<p>$$<br>求\sum_{i&#x3D;1}^{n}\gcd(\left\lfloor\sqrt[3]{i}\right\rfloor,i)\\令m&#x3D;\sqrt[3]{n}\\<br>原式&#x3D;\sum_{i&#x3D;1}^{m-1}\sum_{j&#x3D;i^3}^{(i+1)^3-1}\gcd(i,j)+\sum_{i&#x3D;m^3}^{n}\gcd(m,i)\\<br>\begin{aligned}<br>其中\sum_{i&#x3D;1}^{n}\gcd(i,a)&amp;&#x3D;\sum_{k|a}k\sum_{i&#x3D;1}^{n}[\gcd(i,a)&#x3D;k]\\<br>&amp;&#x3D;\sum_{k|a}k\sum_{i&#x3D;1}^{n&#x2F;k}[\gcd(i,a&#x2F;k)&#x3D;1]\\<br>&amp;&#x3D;\sum_{k|a}k\sum_{i&#x3D;1}^{n&#x2F;k}\sum_{d|\gcd(i,a&#x2F;k)}\mu(d)\\<br>&amp;&#x3D;\sum_{k|a}k\sum_{d|(a&#x2F;k)}\mu(d)\sum_{i&#x3D;1}^{n&#x2F;k}[d|i]\\<br>&amp;&#x3D;\sum_{k|a}k\sum_{d|(a&#x2F;k)}\mu(d)(n&#x2F;kd)\\<br>令l&#x3D;a&#x2F;k:\\<br>上式&amp;&#x3D;\sum_{l|a}\frac{a}{l}\sum_{d|l}\mu(d)\frac{nl}{ad}\\<br>&amp;&#x3D;\sum_{l|a}\frac{an}{la}\sum_{d|l}\mu(d)\frac{l}{d}\\<br>&amp;&#x3D;\sum_{l|a}\frac{n}{l}(\mu*id)<em>l\\<br>&amp;&#x3D;\sum</em>{l|a}\frac{n}{l}\varphi(l)\\<br>&amp;&#x3D;n\sum_{d|a}\frac{\varphi(d)}{d}<br>\end{aligned}\\<br>$$</p><p>$$<br>\begin{aligned}<br>原式&amp;&#x3D;\sum_{i&#x3D;1}^{m-1}\left(\gcd(i^3,i)+\sum_{j&#x3D;1}^{(i+1)^3-1}\gcd(i,j)-\sum_{j&#x3D;1}^{i^3}\gcd(i,j)\right)+\left(\gcd(m,m^3)+\sum_{i&#x3D;1}^{n}\gcd(m,i)-\sum_{i&#x3D;1}^{m^3}\gcd(i,m)\right)\\<br>&amp;&#x3D;\sum_{i&#x3D;1}^{m-1}\left(i+((i+1)^3-1)\sum_{d|i}\frac{\varphi(d)}{d}-i^3\sum_{d|i}\frac{\varphi(d)}{d}\right)+\left(m+n\sum_{d|m}\frac{\varphi(d)}{d}-m^3\sum_{d|m}\frac{\varphi(d)}{d}\right)\\<br>&amp;&#x3D;\sum_{i&#x3D;1}^{m-1}\left(i+(i^3+3i^2+3i+1-1-i^3)\sum_{d|i}\frac{\varphi(d)}{d}\right)+m+\sum_{d|m}\frac{(n-m^3)\varphi(d)}{d}\\<br>&amp;&#x3D;\sum_{i&#x3D;1}^{m-1}\left(i+3(i^2+i)\sum_{d|i}\frac{\varphi(d)}{d}\right)+m+S(可以\sqrt m即n^{\frac{1}{6}}算出)<br>\end{aligned}\\<br>\begin{aligned}<br>左边&amp;&#x3D;\sum_{i&#x3D;1}^{m-1}i+3\sum_{i&#x3D;1}^{m-1}(i^2+i)\sum_{d|i}\frac{\varphi(d)}{d}\\<br>&amp;&#x3D;\frac{m(m-1)}{2}+3\sum_{d&#x3D;1}^{m-1}\frac{\varphi(d)}{d}\sum_{i&#x3D;1}^{m-1}(i^2+i)[d|i]\\<br>&amp;&#x3D;\frac{m(m-1)}{2}+3\sum_{d&#x3D;1}^{m-1}\frac{\varphi(d)}{d}\sum_{i&#x3D;1}^{(m-1)&#x2F;d}(i^2d^2+id)\\<br>&amp;&#x3D;\frac{m(m-1)}{2}+3\sum_{d&#x3D;1}^{m-1}\varphi(d)\sum_{i&#x3D;1}^{(m-1)&#x2F;d}(i^2d+i)\\<br>&amp;&#x3D;\frac{m(m-1)}{2}+3\sum_{d&#x3D;1}^{m-1}\varphi(d)\frac{(m-1)(\frac{m-1}{d}+1)(\frac{2(m-1)}{d}+1)+3((m-1)&#x2F;d)((m-1)&#x2F;d+1)}{6}\\<br>令t&amp;&#x3D;\frac{m-1}{d}\\<br>左&amp;&#x3D;\frac{m(m-1)}{2}+\sum_{i&#x3D;1}^{m-1}\varphi(d)\left[(m-1)\frac{(t+1)(2t+1)}{2}+\frac{3t(t+1)}{2}\right]\\<br>\end{aligned}\\<br>$$</p><p>$$<br>设g(t)&#x3D;(m-1)\frac{(t+1)(2t+1)}{2}+\frac{3t(t+1)}{2}\\<br>有原式&#x3D;\frac{m(m-1)}{2}+\sum_{i&#x3D;1}^{m-1}\varphi(d)g(\frac{m-1}{d})+m+S&#x3D;\sum_{i&#x3D;1}^{m-1}\varphi(d)g(\frac{m-1}{d})+\frac{m(m+1)}{2}+S<br>$$</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 题解 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 莫比乌斯反演 </tag>
+            
+            <tag> 杜教筛 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>FWT学习笔记</title>
+      <link href="/2023/12/08/FWT/"/>
+      <url>/2023/12/08/FWT/</url>
+      
+        <content type="html"><![CDATA[<h1 id="FWT"><a href="#FWT" class="headerlink" title="FWT"></a>FWT</h1><p>$C_k&#x3D;\sum_{i\oplus j&#x3D;k}A_iB_j$</p><p>记为$C&#x3D;A*B$</p><p>$FWT[C]&#x3D;FWT[A]\cdot FWT[B]$ ($\cdot$表示点积)</p><p>设$FWT[A][i]&#x3D;\sum_{j&#x3D;0}^{n-1} c(i,j)A[j]$</p><p>根据定义有<br>$$<br>\begin{aligned}<br>&amp;\because\forall i\in[0,n)\cap\Z,FWT[C]<em>i&#x3D;FWT[A]<em>i\times FWT[B]<em>i\\<br>&amp;\begin{aligned}\therefore\sum</em>{j&#x3D;0}^{n-1}c(i,j)C_j&amp;&#x3D;\left(\sum</em>{j&#x3D;0}^{n-1}c(i,j)A_j\right)\times\left(\sum</em>{j&#x3D;0}^{n-1}c(i,j)B_j\right)\\<br>&amp;&#x3D;\sum_{j&#x3D;0}^{n-1}\left(c(i,j)A_j\sum_{k&#x3D;0}^{n-1}c(i,k)B_k\right)\\<br>&amp;&#x3D;\sum_{j&#x3D;0}^{n-1}\sum_{k&#x3D;0}^{n-1}c(i,j)c(i,k)A_jB_k<br>\end{aligned}\\<br>&amp;又C_j&#x3D;\sum_{j&#x3D;i_1\oplus i_2}A_{i_1}B_{i_2}\\<br>&amp;\begin{aligned}即\sum_{j&#x3D;0}^{n-1}c(i,j)C_j&amp;&#x3D;\sum_{j&#x3D;0}^{n-1}c(i,j)\sum_{j&#x3D;i_1\oplus i_2}A_{i_1}B_{i_2}\\<br>&amp;&#x3D;\sum_{j&#x3D;0}^{n-1}\sum_{k&#x3D;0}^{n-1}c(i,j\oplus k)A_{j}B_{k}\\<br>&amp;&#x3D;\sum_{j&#x3D;0}^{n-1}\sum_{k&#x3D;0}^{n-1}c(i,j)c(i,k)A_jB_k<br>\end{aligned}\\<br>\end{aligned}<br>$$<br>所求即为$c(i,j)c(i,k)&#x3D;c(i,j\oplus k)$</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 模板 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> FWT </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>多项式全家桶</title>
       <link href="/2023/12/02/%E5%A4%9A%E9%A1%B9%E5%BC%8F%E5%85%A8%E5%AE%B6%E6%A1%B6/"/>
       <url>/2023/12/02/%E5%A4%9A%E9%A1%B9%E5%BC%8F%E5%85%A8%E5%AE%B6%E6%A1%B6/</url>
@@ -160,7 +212,7 @@
       <link href="/2023/11/24/%E6%B1%82%E5%AF%BC/"/>
       <url>/2023/11/24/%E6%B1%82%E5%AF%BC/</url>
       
-        <content type="html"><![CDATA[<h2 id="导数基本公式及运算法则"><a href="#导数基本公式及运算法则" class="headerlink" title="导数基本公式及运算法则"></a>导数基本公式及运算法则</h2><table><thead><tr><th>原函数</th><th>导函数</th></tr></thead><tbody><tr><td>$f(x)&#x3D;a$</td><td>$f’(x)&#x3D;0$</td></tr><tr><td>$f(x)&#x3D;x^a$</td><td>$f’(x)&#x3D;ax^{a-1}$</td></tr><tr><td>$f(x)&#x3D;a^x$</td><td>$f’(x)&#x3D;a^x\ln a$</td></tr><tr><td>$f(x)&#x3D;\log_a x$</td><td>$f’(x)&#x3D;\frac{1}{x\ln a}$</td></tr><tr><td>$f(x)&#x3D;\sin x$</td><td>$f’(x)&#x3D;\cos x$</td></tr><tr><td>$f(x)&#x3D;\cos x$</td><td>$f’(x)&#x3D;\sin x$</td></tr><tr><td>$f(x)&#x3D;\tan x$</td><td>$f’(x)&#x3D;\sec^2 x$</td></tr><tr><td>$f(x)&#x3D;\cot x$</td><td>$f’(x)&#x3D;\csc^2 x$</td></tr><tr><td>$f(x)&#x3D;\sec x$</td><td>$f’(x)&#x3D;\sec x\cdot\tan x$</td></tr><tr><td>$f(x)&#x3D;\csc x$</td><td>$f’(x)&#x3D;-\csc x\cdot cot(x)$</td></tr><tr><td>$f(x)&#x3D;\arcsin x$</td><td>$f’(x)&#x3D;\frac{1}{\sqrt{1-x^2}}$</td></tr><tr><td>$f(x)&#x3D;\arccos x$</td><td>$f’(x)&#x3D;\frac{-1}{\sqrt{1-x^2}}$</td></tr><tr><td>$f(x)&#x3D;\arctan x$</td><td>$f’(x)&#x3D;\frac{1}{1+x^2}$</td></tr><tr><td>$f(x)&#x3D;arccot\ x$</td><td>$f’(x)&#x3D;\frac{-1}{1+x^2}$</td></tr><tr><td>$F(x)&#x3D;f(x)\pm g(x)$</td><td>$F’(x)&#x3D;f’(x)\pm g’(x)$</td></tr><tr><td>$F(x)&#x3D;f(x)\cdot g(x)$</td><td>$F’(x)&#x3D;f’(x)\cdot g(x)+f(x)\cdot g’(x)$</td></tr><tr><td>$F(x)&#x3D;\frac{f(x)}{g(x)}$</td><td>$F’(x)&#x3D;\frac{f’(x)\cdot g(x)-f(x)\cdot g’(x)}{g^2(x)}$</td></tr><tr><td>$F(x)&#x3D;f[g(x)]$</td><td>$F’(x)&#x3D;f’[g(x)]g’(x)$</td></tr></tbody></table><p>特别的，</p><p>当$2$中$a&#x3D;e$时，有$f’(x)&#x3D;f(x)&#x3D;e^x$</p><p>当$3$中$a&#x3D;e$时，有$f’(x)&#x3D;\frac{1}{x}$</p>]]></content>
+        <content type="html"><![CDATA[<h2 id="导数基本公式及运算法则"><a href="#导数基本公式及运算法则" class="headerlink" title="导数基本公式及运算法则"></a>导数基本公式及运算法则</h2><table><thead><tr><th>原函数</th><th>导函数</th></tr></thead><tbody><tr><td>$f(x)&#x3D;a$</td><td>$f’(x)&#x3D;0$</td></tr><tr><td>$f(x)&#x3D;x^a$</td><td>$f’(x)&#x3D;ax^{a-1}$</td></tr><tr><td>$f(x)&#x3D;a^x$</td><td>$f’(x)&#x3D;a^x\ln a$</td></tr><tr><td>$f(x)&#x3D;\log_a x$</td><td>$f’(x)&#x3D;\frac{1}{x\ln a}$</td></tr><tr><td>$f(x)&#x3D;\sin x$</td><td>$f’(x)&#x3D;\cos x$</td></tr><tr><td>$f(x)&#x3D;\cos x$</td><td>$f’(x)&#x3D;\sin x$</td></tr><tr><td>$f(x)&#x3D;\tan x$</td><td>$f’(x)&#x3D;\sec^2 x$</td></tr><tr><td>$f(x)&#x3D;\cot x$</td><td>$f’(x)&#x3D;\csc^2 x$</td></tr><tr><td>$f(x)&#x3D;\sec x$</td><td>$f’(x)&#x3D;\sec x\cdot\tan x$</td></tr><tr><td>$f(x)&#x3D;\csc x$</td><td>$f’(x)&#x3D;-\csc x\cdot cot(x)$</td></tr><tr><td>$f(x)&#x3D;\arcsin x$</td><td>$f’(x)&#x3D;\frac{1}{\sqrt{1-x^2}}$</td></tr><tr><td>$f(x)&#x3D;\arccos x$</td><td>$f’(x)&#x3D;\frac{-1}{\sqrt{1-x^2}}$</td></tr><tr><td>$f(x)&#x3D;\arctan x$</td><td>$f’(x)&#x3D;\frac{1}{1+x^2}$</td></tr><tr><td>$f(x)&#x3D;\text{arccot}\ x$</td><td>$f’(x)&#x3D;\frac{-1}{1+x^2}$</td></tr><tr><td>$F(x)&#x3D;f(x)\pm g(x)$</td><td>$F’(x)&#x3D;f’(x)\pm g’(x)$</td></tr><tr><td>$F(x)&#x3D;f(x)\cdot g(x)$</td><td>$F’(x)&#x3D;f’(x)\cdot g(x)+f(x)\cdot g’(x)$</td></tr><tr><td>$F(x)&#x3D;\frac{f(x)}{g(x)}$</td><td>$F’(x)&#x3D;\frac{f’(x)\cdot g(x)-f(x)\cdot g’(x)}{g^2(x)}$</td></tr><tr><td>$F(x)&#x3D;f[g(x)]$</td><td>$F’(x)&#x3D;f’[g(x)]g’(x)$</td></tr></tbody></table><p>特别的，</p><p>当$2$中$a&#x3D;e$时，有$f’(x)&#x3D;f(x)&#x3D;e^x$</p><p>当$3$中$a&#x3D;e$时，有$f’(x)&#x3D;\frac{1}{x}$</p>]]></content>
       
       
       <categories>
